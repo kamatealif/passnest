@@ -21,3 +21,11 @@ async def login_user(user_credentials : User):
 @app.post('/register')
 async def register_user(user_credentials : User):
     
+    
+@app.post('/logout')
+async def logout_user():
+    return {"message": "Logout successful"}
+
+@app.get('/user/{user_id}')
+async def get_user(user_id : int):
+    return {"user_id": user_id, 'message': "your passwords and emails are safe with us"}
